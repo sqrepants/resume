@@ -13,6 +13,7 @@ module.exports = {
     extend: {
       fontFamily: {
         burtons: "burtons",
+        robertomono: "robertomono",
       },
     },
   },

@@ -7,19 +7,46 @@ import {
 } from "react-icons/ai";
 import Image from "next/image";
 import nicho from "../public/nicho.png";
-import design from "../public/design.png";
+import nichodark from "../public/nichodark.png";
+import bermudez from "../public/workplaces/bermudez.png";
+import kaizen from "../public/workplaces/kaizen.png";
+import evolve from "../public/workplaces/evolve.png";
+import mofe from "../public/workplaces/mofe.png";
+import monstermedia from "../public/workplaces/monstermedia.png";
+import gg from "../public/workplaces/gg.png";
 import code from "../public/code.png";
-import consulting from "../public/consulting.png";
-import web1 from "../public/web1.png";
-import web2 from "../public/web2.png";
-import web3 from "../public/web3.png";
-import web4 from "../public/web4.png";
-import web5 from "../public/web5.png";
-import web6 from "../public/web6.png";
+import evolvelogo from "../public/evolvelogo.png";
 import { useState } from "react";
+
+import Experience from "./components/experience";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+
+  let image;
+  if (darkMode) {
+    image = (
+      <Image
+        alt="plz hire me :("
+        src={nichodark}
+        fill
+        style={{ objectFit: "cover" }}
+      />
+    );
+  } else {
+    image = (
+      <Image
+        alt="plz hire me :("
+        src={nicho}
+        fill
+        style={{ objectFit: "cover" }}
+      />
+    );
+  }
+
+  let emoji1 = darkMode ? "🌙" : "🛠️";
+  let emoji2 = darkMode ? "☕" : "👨‍💻";
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -59,12 +86,12 @@ export default function Home() {
               Nicholas Bridgemohan
             </h2>
             <h3 className="text-2xl py-2 md:text-3xl text-gray-900 dark:text-gray-300">
-              Senior Developer Extraordinaire
+              {emoji1} Senior Developer {emoji2}
             </h3>
             <p className="text-md py-5 leading-8 md:text-xl max-w-xl mx-auto  text-gray-800 dark:text-gray-300">
-              I am a highly skilled and experienced developer with a strong
-              background in back-end technologies using Javascript, PHP and Java
-              and constantly in pursuit of learning more.
+              I am a highly skilled and experienced full-stack developer with a
+              strong background in back-end technologies using Javascript, PHP
+              and Java and constantly in pursuit of learning more.
             </p>
           </div>
 
@@ -73,12 +100,7 @@ export default function Home() {
           relative mx-auto rounded-full w-80 h-80 overflow-hidden md:h-96 md:w-96
           bg-gradient-to-r from-teal-400 to-blue-600 dark:bg-gradient-to-r dark:from-pink-400 dark:to-purple-400"
           >
-            <Image
-              alt="plz hire me :("
-              src={nicho}
-              fill
-              style={{ objectFit: "cover" }}
-            />
+            {image}
           </div>
 
           <div className="text-5xl flex justify-center gap-16 py-3 mt-12 text-gray-600">
@@ -93,78 +115,8 @@ export default function Home() {
             </a>
           </div>
         </section>
-        {/* 
-        <section>
-          <div className="text-center">
-            <h3 className="text-2xl py-2">Services I offer</h3>
-            <p className="text-md py-5 leading-8 text-gray-800">
-              text text text text text text text text text text text text text
-              text text text text text text text text text text text text text
-              text text text text text text
-              <span className="text-teal-400">span text wowwwo</span> text text
-              text text text text text text text text text text text asfgasd
-            </p>
-          </div>
 
-          <div className="lg:flex gap-10 justify-center">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image
-                className="mx-auto"
-                src={consulting}
-                alt="consulting"
-                width={100}
-                height={100}
-              />
-              <h3 className="text-lg font-medium pt-8 pb-2">
-                Beautiful Designs
-              </h3>
-              <p>Creating elegant designs suiteed for your design theory</p>
-              <h4>Tools I used</h4>
-              <p className="text-gray-800 py-1">test1</p>
-              <p className="text-gray-800 py-1">test1</p>
-              <p className="text-gray-800 py-1">test1</p>
-              <p className="text-gray-800 py-1">test1</p>
-            </div>
-
-            <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image
-                className="mx-auto"
-                src={design}
-                alt="design"
-                width={100}
-                height={100}
-              />
-              <h3 className="text-lg font-medium pt-8 pb-2">
-                Beautiful Designs
-              </h3>
-              <p>Creating elegant designs suiteed for your design theory</p>
-              <h4>Tools I used</h4>
-              <p className="text-gray-800 py-1">test1</p>
-              <p className="text-gray-800 py-1">test1</p>
-              <p className="text-gray-800 py-1">test1</p>
-              <p className="text-gray-800 py-1">test1</p>
-            </div>
-
-            <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image
-                className="mx-auto"
-                src={code}
-                alt="code"
-                width={100}
-                height={100}
-              />
-              <h3 className="text-lg font-medium pt-8 pb-2">
-                Beautiful Designs
-              </h3>
-              <p>Creating elegant designs suiteed for your design theory</p>
-              <h4>Tools I used</h4>
-              <p className="text-gray-800 py-1">test1</p>
-              <p className="text-gray-800 py-1">test1</p>
-              <p className="text-gray-800 py-1">test1</p>
-              <p className="text-gray-800 py-1">test1</p>
-            </div>
-          </div>
-        </section> */}
+        <section></section>
 
         <section>
           <div className="text-center p-10 py-10">
@@ -176,64 +128,99 @@ export default function Home() {
               Experience
             </h2>
             <h3 className="text-2xl py-2 md:text-3xl text-gray-900 dark:text-gray-300">
-              Senior Developer Extraordinaire
+              📋 7+ Years in Various Industries 👴🏽
             </h3>
             <p className="text-md py-5 leading-8 md:text-xl max-w-xl mx-auto  text-gray-800 dark:text-gray-300">
-              I am a highly skilled and experienced developer with a strong
-              background in back-end technologies using Javascript, PHP and Java
-              and constantly in pursuit of learning more.
+              Here is a list of my past and current employment
             </p>
           </div>
 
-          <div className="">
-            <h3 className="text-2xl text-gray-700 font-bold mb-6 ml-3">
-              Latest News
-            </h3>
+          <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-16 justify-center">
+            <Experience
+              time={"09 / 2021 - Current"}
+              company={"Evolve Mortgage Services"}
+              role={"Senior Developer"}
+              summary={
+                " Developed new features and functionality on Java based mortgage enterprise solution for the company. Created NodeJS app to allow communication and editing of data on legacy applications. Developed features on Asp.net Core based app using MISMO conventions."
+              }
+              techStack={
+                "J2EE, MSSQL / NodeJS, MSSQL, ExpressJS, ReactJS / Asp.net Core"
+              }
+              skills={"MISMO Mapping, Eclipse IDE, Legacy Codebase Debugging"}
+              url={"https://www.evolvemortgageservices.com"}
+              image={evolve}
+            />
 
-            <ol>
-              <li className="border-l-2 border-purple-600">
-                <div className="md:flex flex-start self-center">
-                  <div className="bg-purple-600 w-6 h-6 flex items-center justify-center rounded-full -ml-3.5"></div>
-                  <div className="block p-6 rounded-lg shadow-lg bg-gray-100 max-w-md ml-6 mb-10">
-                    <div className="flex justify-between mb-4">
-                      <a
-                        href="#!"
-                        className="font-medium text-purple-600 hover:text-purple-700 focus:text-purple-800 duration-300 transition ease-in-out text-sm"
-                      >
-                        New Web Design
-                      </a>
-                      <a
-                        href="#!"
-                        className="font-medium text-purple-600 hover:text-purple-700 focus:text-purple-800 duration-300 transition ease-in-out text-sm"
-                      >
-                        04 / 02 / 2022
-                      </a>
-                    </div>
-                    <p className="text-gray-700 mb-6">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Quisque scelerisque diam non nisi semper, et elementum
-                      lorem ornare. Maecenas placerat facilisis mollis. Duis
-                      sagittis ligula in sodales vehicula.
-                    </p>
-                    <button
-                      type="button"
-                      className="inline-block px-4 py-1.5 bg-purple-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out"
-                      data-mdb-ripple="true"
-                    >
-                      Preview
-                    </button>
-                    <button
-                      type="button"
-                      className="inline-block px-3.5 py-1 border-2 border-purple-600 text-purple-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-                      data-mdb-ripple="true"
-                    >
-                      See demo
-                    </button>
-                  </div>
-                </div>
-              </li>
-            </ol>
+            <Experience
+              time={"12 / 2019 - 08 / 2021"}
+              company={"Guardian Group"}
+              role={"Full Stack Developer"}
+              summary={
+                "Spearheded back-end development on myGGOnline platform which allowed Guardian group to consolidate multiple backend customer and transactional data stores allowing across three companies providing a unified customer experience where a customer can access all real time portfolio - life, health , pension, mutual funds on one portal."
+              }
+              techStack={"MongoDB, ExpressJS, ReactJS & NodeJS(TypeScript)"}
+              skills={
+                "Microservices, API Management, Azure DevOps & CI/CD, Penetration Testing"
+              }
+              url={"https://www.myguardiangroup.com/"}
+              image={gg}
+            />
+
+            <Experience
+              time={"05 / 2018 - 12 / 2019"}
+              company={"Bermudez Group Services"}
+              role={"Programmer/Analyst"}
+              summary={
+                "Developed various reports based on data entered by truck salesmen on proprietary handheld devices. Created new commissions report system, alongside custom applications to replace the old commissions report system thereby increasing efficiency, accuracy and ease of delivery in Bermudez Sales."
+              }
+              techStack={"Apache/ MSSQL / PHP"}
+              skills={
+                "Crystal Reports, Microsoft Reporting Services, MSSQL, ERP (MS Dynamics) Scripting"
+              }
+              url={"http://www.bermudezgroupltd.com/"}
+              image={bermudez}
+            />
+
+            <Experience
+              time={"05 / 2017 - 05 / 2018"}
+              company={"Ministry of Finance, Treasury Division"}
+              role={"Information Systems Specialist"}
+              summary={
+                "Administered financial reports and maintained database for the Government Payment System of Trinidad and Tobago, to be used by the Comptroller of Accounts for reporting to the various governmental ministries. Developed report to summarize all data and spending for each financial year by ministry thereby increasing efficiency for the Treasury Division of the Ministry of Finance."
+              }
+              techStack={"AspNet / MSSQL"}
+              skills={"MSSQL, SQL Reporting Server"}
+              url={"https://www.finance.gov.tt/"}
+              image={mofe}
+            />
+
+            <Experience
+              time={"02 / 2017 - 05 / 2017"}
+              company={"Monster Media Group"}
+              role={"Web Developer"}
+              summary={
+                "Designed insurance brokerage platform using Laravel. Performed website development using Wordpress and HTML/CSS/JS alongside team of graphic designers."
+              }
+              techStack={"PHP / MSSQL"}
+              skills={"Laravel, Wordpress, CodeIgniter"}
+              url={"https://www.monstermediagroup.com/"}
+              image={monstermedia}
+            />
+
+            <Experience
+              time={"11 / 2015 - 02 / 2017"}
+              company={"Kaizen Environmental Services Trinidad Ltd"}
+              role={"Software Developer"}
+              summary={
+                "Designed and developed multi-departmental inventory management system as a solo developer. System utilized barcodereading, PDF printing and custom PDF signature system."
+              }
+              techStack={"Linux, Nginx, MySQL, PHP"}
+              skills={"Linux Terminal, Javascript"}
+              url={"http://www.kaizen-tt.com/main.php"}
+              image={kaizen}
+            />
           </div>
+
           {/* <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
             <div className="basis-1/3 flex-1">
               <Image

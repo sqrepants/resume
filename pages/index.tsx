@@ -96,7 +96,8 @@ export default function Home() {
                 <a
                   className="
                   text-white px-4 py-2 rounded-md ml-8 bg-gradient-to-r from-teal-400 to-blue-600 dark:bg-gradient-to-r dark:from-pink-400 dark:to-purple-400"
-                  href="#"
+                  href="https://drive.google.com/file/d/1GBanrvJ8_91fW9cDYRTTAy1kPTUSnyKk/view?usp=sharing"
+                  target="_blank"
                 >
                   Resume
                 </a>

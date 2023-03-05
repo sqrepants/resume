@@ -151,7 +151,7 @@ export default function Home() {
               📚 Take a look at my educational background 📚
             </h3>
             <p className="text-md py-5 leading-8 md:text-xl max-w-xl mx-auto  text-gray-800 dark:text-gray-300">
-              See the Academic Institutes that I've been to
+              See the Academic Institutes that I&apos;ve been to
             </p>
           </div>
 

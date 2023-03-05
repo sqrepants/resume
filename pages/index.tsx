@@ -1,10 +1,13 @@
 import Head from "next/head";
-import { BsFillMoonStarsFill, BsPhone, BsWhatsapp } from "react-icons/bs";
+import { BsFillMoonStarsFill, BsFillPhoneFill } from "react-icons/bs";
+import { RiWhatsappFill } from "react-icons/ri";
+import { MdCall } from "react-icons/md";
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillYoutube,
   AiOutlineMail,
+  AiFillMail,
 } from "react-icons/ai";
 import Image from "next/image";
 import nicho from "../public/nicho.png";
@@ -61,7 +64,7 @@ export default function Home() {
       </Head>
       <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900  font-robertomono">
         <section className="min-h-screen">
-          <nav className="py-10 mb-12 flex justify-between dark:fill-white">
+          <nav className="py-10 mb-8 flex justify-between dark:fill-white">
             <h1 className="text-xl dark:text-white">developedbynic</h1>
             <ul className="flex items-center">
               <li>
@@ -108,7 +111,7 @@ export default function Home() {
           </div>
 
           <div className="text-5xl flex justify-center gap-16 py-3 mt-12 text-gray-600">
-            <a target="_blank" href="https://twitter.com/sqrpants">
+            {/* <a target="_blank" href="https://twitter.com/sqrpants">
               <AiFillTwitterCircle className="dark:fill-white" />
             </a>
             <a target="_blank" href="https://www.linkedin.com/in/bridgemohan/">
@@ -116,12 +119,27 @@ export default function Home() {
             </a>
             <a target="_blank" href="https://www.youtube.com/@bridgemohan">
               <AiFillYoutube className="dark:fill-white" />
+            </a> */}
+            <a target="_blank" href="tel:1-868-279-3914">
+              <MdCall className="dark:fill-white" />
+            </a>
+            <a
+              target="_blank"
+              href="https://api.whatsapp.com/send?phone=18682793914&text=We%20are%20interested%20in%20meeting%20you!%20%F0%9F%98%80"
+            >
+              <RiWhatsappFill className="dark:fill-white" />
+            </a>
+            <a
+              target="_blank"
+              href="mailto:nbridgemohan@gmail.com?subject=We%20are%20interested%20in%20meeting%20you!%20%F0%9F%98%80"
+            >
+              <AiFillMail className="dark:fill-white" />
             </a>
           </div>
         </section>
 
-        {/* <section>
-          <div className="text-center p-10 py-10">
+        <section>
+          <div className="text-center p-10 pt-60 pb-10">
             <h2
               className="
             text-3xl py-2 font-medium md:text-5xl text-transparent bg-clip-text 
@@ -133,7 +151,7 @@ export default function Home() {
               📚 Take a look at my educational background 📚
             </h3>
             <p className="text-md py-5 leading-8 md:text-xl max-w-xl mx-auto  text-gray-800 dark:text-gray-300">
-              See the Academic Institutes  that I've been to
+              See the Academic Institutes that I've been to
             </p>
           </div>
 
@@ -153,7 +171,7 @@ export default function Home() {
               image={uof}
             />
           </div>
-        </section> */}
+        </section>
         {/* experience */}
         <section>
           <div className="text-center p-10 pt-60 pb-10">
@@ -260,7 +278,7 @@ export default function Home() {
         </section>
 
         {/* contact */}
-        <section>
+        {/* <section>
           <div className="text-center p-10 pt-60 pb-10">
             <h2
               className="
@@ -290,7 +308,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </section>
+        </section> */}
         <footer>
           <div className="text-center">
             <p>&#169; 2023 Nicholas Bridgemohan</p>

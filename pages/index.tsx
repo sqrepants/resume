@@ -62,10 +62,29 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900  font-robertomono">
+      <main
+        className=" 
+        px-10 md:px-20 lg:px-40 font-robertomono
+        bg-slate-50
+        dark:bg-slate-800
+        "
+      >
         <section className="min-h-screen">
           <nav className="py-10 mb-8 flex justify-between dark:fill-white">
-            <h1 className="text-xl dark:text-white">developedbynic</h1>
+            <h1
+              className="
+              text-transparent bg-clip-text 
+              text-xl bg-gradient-to-r
+            from-teal-400
+            via-blue-300
+            to-blue-600
+            dark:from-pink-500
+            dark:via-blue-500
+            dark:to-purple-500          
+            background-animate"
+            >
+              developedbynic
+            </h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill
@@ -105,7 +124,14 @@ export default function Home() {
           <div
             className="
           relative mx-auto rounded-full w-80 h-80 overflow-hidden md:h-96 md:w-96
-          bg-gradient-to-r from-teal-400 to-blue-600 dark:bg-gradient-to-r dark:from-pink-400 dark:to-purple-400"
+          bg-gradient-to-r
+          from-teal-400
+          via-blue-300
+          to-blue-600
+          dark:from-pink-500
+          dark:via-blue-500
+          dark:to-purple-500          
+          background-animate "
           >
             {image}
           </div>
@@ -148,7 +174,7 @@ export default function Home() {
               Education
             </h2>
             <h3 className="text-2xl py-2 md:text-3xl text-gray-900 dark:text-gray-300">
-              📚 Take a look at my educational background 📚
+              Take a look at my educational background 📚
             </h3>
             <p className="text-md py-5 leading-8 md:text-xl max-w-xl mx-auto  text-gray-800 dark:text-gray-300">
               See the Academic Institutes that I&apos;ve been to
@@ -183,7 +209,7 @@ export default function Home() {
               Experience
             </h2>
             <h3 className="text-2xl py-2 md:text-3xl text-gray-900 dark:text-gray-300">
-              📋 7+ Years in Various Industries 👴🏽
+              7+ Years in Various Industries 👴🏽
             </h3>
             <p className="text-md py-5 leading-8 md:text-xl max-w-xl mx-auto  text-gray-800 dark:text-gray-300">
               Here is a list of my past and current employment
@@ -276,6 +302,7 @@ export default function Home() {
             />
           </div>
         </section>
+        <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
 
         {/* contact */}
         {/* <section>

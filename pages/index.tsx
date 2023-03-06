@@ -117,8 +117,8 @@ export default function Home() {
             </h3>
             <p className="text-md py-5 leading-8 md:text-xl max-w-xl mx-auto  text-gray-800 dark:text-gray-300">
               I am a highly skilled and experienced full-stack developer with a
-              strong background in back-end technologies using Javascript, PHP
-              and Java and constantly in pursuit of learning more.
+              strong background in technologies using Javascript, PHP and Java
+              and constantly in pursuit of learning more.
             </p>
           </div>
 
